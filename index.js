@@ -11,7 +11,8 @@ app.use(cors())
     .use(express.urlencoded({
         extended: false
     }))    
-    .use('/user', userRouter);
+    .use('/user', userRouter)
+    .get('/', (req, res) => res.send('Home Page Route'));
 // connectToDb();
 
 
